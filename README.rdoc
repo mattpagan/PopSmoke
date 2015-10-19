@@ -2,9 +2,9 @@
 
 App Name: popsmoke-capstone
 
-[PopSmoke](https://git.heroku.com/popsmoke-capstone.git)
+[PopSmoke]("https://git.heroku.com/popsmoke-capstone.git")
 
-[Other Heroku URL](https://popsmoke-capstone.herokuapp.com/)
+[Other Heroku URL]("https://popsmoke-capstone.herokuapp.com/")
 
 Things you may want to cover:
 
