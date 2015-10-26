@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+
   devise_for :users
   get 'welcome/index'
 
   get 'welcome/about'
 
   post :incoming, to: 'incoming#create'
+
+  get   '/login', :to => 'sessions#new', :as => :login
+  get 'auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
+  get 'auth/failure', :to => 'sessions#failure', via: [:get, :post]
+  get '/logout', :to => 'sessions#destroy', via: [:get, :post]
 
   root to: 'welcome#index'
 
