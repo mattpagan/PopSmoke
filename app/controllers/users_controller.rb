@@ -19,4 +19,5 @@ class UsersController < ApplicationController
   end
   def login
     @user = User.from_omniauth(request.env['omniauth.auth']['credentials'])
+  end
 end
