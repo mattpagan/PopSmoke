@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
-  def index
+  def community
   end
 
-  def about
+  def podcast
   end
 end

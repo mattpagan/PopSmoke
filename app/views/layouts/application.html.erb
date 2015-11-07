@@ -4,27 +4,21 @@
   <title>PopSmoke</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "cover.css" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-	<ul>
-		<ul class="nav nav-tabs">
-		    <li><%= link_to "Home", welcome_index_path %></li>
-		    <li><%= link_to "About", welcome_about_path %></li>
-
-		   <div class="pull-right user-info">
-	           <% if user_signed_in? %>
-	             Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-	           <% else %>
-	             <%= link_to "Sign In", new_user_session_path %> or
-	             <%= link_to "Sign Up", new_user_registration_path %> or
+       <div class="pull-right user-info">
+             <% if user_signed_in? %>
+               Hey <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+             <% else %>
+               <%= link_to "Login", new_user_session_path %> /
+               <%= link_to "Sign Up", new_user_registration_path %> /
                <%= link_to "Login with Facebook", user_omniauth_authorize_path(:facebook) %>
-	           <% end %>
-	     <div>
-		</ul>
-		<% if flash[:notice] %>
+             <% end %>
+       </div>
+    <% if flash[:notice] %>
          <div class="alert alert-success">
            <button type="button" class="close" data-dismiss="alert">&times;</button>
            <%= flash[:notice] %>
@@ -43,6 +37,5 @@
 		     	
 	<%= yield %>
 	</div>
-
 </body>
 </html>

@@ -18,9 +18,20 @@
 @import "bootstrap";
 
 .user-info {
-   margin-top: 9px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-right: 20px;
  }
  
  .nav {
    margin-top: 5px;
+ }
+
+ .signup-form {
+ 	max-width: 300px;
+ 	margin: 0 auto;
+ }
+
+ .community {
+ 	margin-top: 100px;
  }

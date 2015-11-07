@@ -10,9 +10,11 @@ Rails.application.routes.draw do
 
   post :incoming, to: 'incoming#create'
   
-  get 'welcome/index'
+  get 'welcome/community'
 
-  get 'welcome/about'
+  get 'welcome/articles'
+
+  get 'welcome/podcast'
 
   #get '/auth/:provider/callback', :to => 'sessions#create'
   #get 'auth/failure', to: redirect('/')
@@ -21,5 +23,5 @@ Rails.application.routes.draw do
   #resources :sessions, only: [:create, :destroy]
   resource :welcome, only: [:index]
 
-  root to: 'welcome#index'
+  root to: 'welcome#home'
 end
